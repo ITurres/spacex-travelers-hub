@@ -1,10 +1,13 @@
 @import url('bootstrap/dist/css/bootstrap.min.css');
+
 header {
   background-color: #fff;
 }
+
 .nav-link.active {
   position: relative;
 }
+
 .nav-link.active::before {
   content: '';
   position: absolute;
@@ -17,6 +20,7 @@ header {
   transform-origin: left;
   animation: outline 500ms ease forwards;
 }
+
 @media (max-width: 768px) {
   .nav-link.active::before {
     display: none;
