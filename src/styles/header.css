@@ -1,0 +1,28 @@
+@import url('bootstrap/dist/css/bootstrap.min.css');
+
+header {
+  background-color: #fff;
+}
+
+.nav-link.active {
+  position: relative;
+}
+
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  left: 8px;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: outline 500ms ease forwards;
+}
+
+@media (max-width: 768px) {
+  .nav-link.active::before {
+    display: none;
+  }
+}
