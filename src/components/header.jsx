@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 import icon from '../images/planet.png';
+import '../styles/header.css';
 
 const MainHeader = () => (
   <Navbar bg="light" variant="light" expand="md">
