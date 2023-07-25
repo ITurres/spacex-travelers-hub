@@ -55,7 +55,7 @@ const RocketCard = ({ rocketProps }) => {
 
 RocketCard.defaultProps = {
   rocketProps: {},
-  id: '',
+  id: 0,
   name: '',
   description: '',
   flickrImages: [],
@@ -63,13 +63,13 @@ RocketCard.defaultProps = {
 
 RocketCard.propTypes = {
   rocketProps: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     name: PropTypes.string,
     description: PropTypes.string,
     flickrImages: PropTypes.arrayOf(PropTypes.string),
     reserved: PropTypes.bool,
   }),
-  id: PropTypes.string,
+  id: PropTypes.number,
   name: PropTypes.string,
   description: PropTypes.string,
   flickrImages: PropTypes.arrayOf(PropTypes.string),
