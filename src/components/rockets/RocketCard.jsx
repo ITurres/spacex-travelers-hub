@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Badge } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket, cancelRocket } from '../../redux/rockets/rockets-slice';
@@ -8,11 +8,7 @@ const RocketCard = ({ rocketProps }) => {
   const dispatch = useDispatch();
 
   const {
-    id,
-    name,
-    description,
-    flickrImages,
-    reserved,
+    id, name, description, flickrImages, reserved,
   } = rocketProps;
 
   const handleReserveRocket = () => {
@@ -33,16 +29,21 @@ const RocketCard = ({ rocketProps }) => {
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text style={{ maxHeight: '221px', overflow: 'auto' }}>
+              {reserved && (
+                <Badge variant="info" bg="info" className="mb-2">
+                  Reserved
+                </Badge>
+              )}
+              &nbsp;
               {description}
             </Card.Text>
-            {!reserved && (
+            {reserved ? (
+              <Button variant="outline-danger" onClick={handleCancelRocket}>
+                Cancel Reservation
+              </Button>
+            ) : (
               <Button variant="outline-primary" onClick={handleReserveRocket}>
                 Reserve Rocket
-              </Button>
-            )}
-            {reserved && (
-              <Button variant="outline-danger" onClick={handleCancelRocket}>
-                Cancel Booking
               </Button>
             )}
           </Card.Body>
@@ -54,7 +55,7 @@ const RocketCard = ({ rocketProps }) => {
 
 RocketCard.defaultProps = {
   rocketProps: {},
-  id: '',
+  id: 0,
   name: '',
   description: '',
   flickrImages: [],
@@ -62,13 +63,13 @@ RocketCard.defaultProps = {
 
 RocketCard.propTypes = {
   rocketProps: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     name: PropTypes.string,
     description: PropTypes.string,
     flickrImages: PropTypes.arrayOf(PropTypes.string),
     reserved: PropTypes.bool,
   }),
-  id: PropTypes.string,
+  id: PropTypes.number,
   name: PropTypes.string,
   description: PropTypes.string,
   flickrImages: PropTypes.arrayOf(PropTypes.string),
