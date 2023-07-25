@@ -1,12 +1,27 @@
+import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket, cancelRocket } from '../../redux/rockets/rockets-slice';
 
 const RocketCard = ({ rocketProps }) => {
+  const dispatch = useDispatch();
+
   const {
+    id,
     name,
     description,
     flickrImages,
+    reserved,
   } = rocketProps;
+
+  const handleReserveRocket = () => {
+    dispatch(reserveRocket(id));
+  };
+
+  const handleCancelRocket = () => {
+    dispatch(cancelRocket(id));
+  };
 
   return (
     <Card>
@@ -20,7 +35,16 @@ const RocketCard = ({ rocketProps }) => {
             <Card.Text style={{ maxHeight: '221px', overflow: 'auto' }}>
               {description}
             </Card.Text>
-            <Button variant="outline-primary">Reserve Rocket</Button>
+            {!reserved && (
+              <Button variant="outline-primary" onClick={handleReserveRocket}>
+                Reserve Rocket
+              </Button>
+            )}
+            {reserved && (
+              <Button variant="outline-danger" onClick={handleCancelRocket}>
+                Cancel Booking
+              </Button>
+            )}
           </Card.Body>
         </div>
       </div>
@@ -30,6 +54,7 @@ const RocketCard = ({ rocketProps }) => {
 
 RocketCard.defaultProps = {
   rocketProps: {},
+  id: '',
   name: '',
   description: '',
   flickrImages: [],
@@ -37,10 +62,13 @@ RocketCard.defaultProps = {
 
 RocketCard.propTypes = {
   rocketProps: PropTypes.shape({
+    id: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
     flickrImages: PropTypes.arrayOf(PropTypes.string),
+    reserved: PropTypes.bool,
   }),
+  id: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
   flickrImages: PropTypes.arrayOf(PropTypes.string),
