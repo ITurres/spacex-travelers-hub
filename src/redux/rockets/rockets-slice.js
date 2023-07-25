@@ -31,7 +31,7 @@ export const rocketsSlice = createSlice({
   name: 'rockets',
   initialState: {
     rockets: [],
-    filtered: [],
+    filteredRockets: [],
     loading: false,
     error: null,
   },
