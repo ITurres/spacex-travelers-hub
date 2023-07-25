@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Header from './components/header';
 import RocketsPage from './pages/rockets';
+import MissionsPage from './pages/MissionsPage';
 import { fetchRockets } from './redux/rockets/rockets-slice';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <main className="container my-3">
         <Routes>
           <Route path="/" element={<RocketsPage state={state} />} />
+          <Route path="/missions" element={<MissionsPage />} />
         </Routes>
       </main>
     </>
