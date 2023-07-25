@@ -45,10 +45,20 @@ export const rocketsSlice = createSlice({
     },
     cancelRocket: (state, action) => {
       const { payload: rocketId } = action;
-      const rocket = state.rockets.find((rocket) => rocket.id === rocketId);
-      if (rocket) {
-        rocket.reserved = false;
-      }
+      const updatedRockets = state.rockets.map((rocket) => {
+        if (rocket.id === rocketId) {
+          return {
+            ...rocket,
+            reserved: false,
+          };
+        }
+        return rocket;
+      });
+      return {
+        ...state,
+        rockets: updatedRockets,
+        filteredRockets: updatedRockets.filter((rocket) => rocket.reserved),
+      };
     },
     filterReservedRockets: (state) => ({
       ...state,
