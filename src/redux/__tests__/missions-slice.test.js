@@ -4,7 +4,6 @@ import missionsReducer, {
   filterReservedMissions,
 } from '../missions/missions-slice';
 
-jest.mock('axios');
 describe('missions slice', () => {
   describe('reducers', () => {
     const initialState = {
