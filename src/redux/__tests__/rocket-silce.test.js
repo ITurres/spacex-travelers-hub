@@ -1,6 +1,4 @@
-// rockets-slice.test.js
 import rocketsReducer, {
-  fetchRockets,
   reserveRocket,
   cancelRocket,
   filterReservedRockets,

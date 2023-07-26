@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 
 import Header from './components/header';
-import RocketsPage from './pages/rockets';
+import RocketsPage from './pages/RocketPage';
 import MissionsPage from './pages/MissionsPage';
 import { fetchRockets } from './redux/rockets/rockets-slice';
 import ProfilePage from './pages/ProfilePage';
