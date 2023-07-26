@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Button } from 'react-bootstrap';
+import { Button, Badge } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../../redux/missions/missions-slice';
 
@@ -25,7 +25,25 @@ const MissionRow = ({ mission }) => {
       </td>
       <td>{description}</td>
       <td className="p-3">STATUS BADGE</td>
-      <td className="p-3">
+      <td className="p-3" style={{ verticalAlign: 'middle' }}>
+        {reserved ? (
+          <Badge variant="info" bg="info">
+            Active Member
+          </Badge>
+        ) : (
+          <Badge variant="secondary" bg="secondary">
+            NOT A MEMBER
+          </Badge>
+        )}
+      </td>
+      <td
+        className="p-3"
+        style={{
+          minWidth: '140px',
+          textAlign: 'center',
+          verticalAlign: 'middle',
+        }}
+      >
         {reserved ? (
           <Button
             variant="outline-danger"
