@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Table } from 'react-bootstrap';
+import MissionRow from './MissionRow';
 
 const MissionsList = ({ missions }) => (
   <Table striped bordered responsive="sm">
@@ -13,27 +14,14 @@ const MissionsList = ({ missions }) => (
     </thead>
     <tbody>
       {missions.map((mission) => (
-        <tr key={mission.missionId}>
-          <td>
-            <strong>{mission.missionName}</strong>
-          </td>
-          <td>{mission.description}</td>
-          <td className="p-3">STATUS BADGE</td>
-          <td className="p-3">JOIN MISSION BUTTON</td>
-        </tr>
+        <MissionRow key={mission.missionId} mission={mission} />
       ))}
     </tbody>
   </Table>
 );
 
 MissionsList.propTypes = {
-  missions: PropTypes.arrayOf(
-    PropTypes.shape({
-      missionId: PropTypes.string.isRequired,
-      missionName: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  missions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default MissionsList;
