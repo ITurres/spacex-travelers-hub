@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { joinMission } from '../../redux/missions/missions-slice';
+import { joinMission, leaveMission } from '../../redux/missions/missions-slice';
 
 const MissionRow = ({ mission }) => {
   const dispatch = useDispatch();
@@ -10,9 +10,12 @@ const MissionRow = ({ mission }) => {
     missionId, missionName, description, reserved,
   } = mission;
 
-  const handleMissionActions = () => {
-    if (!reserved) return;
+  const handleMissionJoin = () => {
     dispatch(joinMission(missionId));
+  };
+
+  const handleMissionLeave = () => {
+    dispatch(leaveMission(missionId));
   };
 
   return (
@@ -24,14 +27,18 @@ const MissionRow = ({ mission }) => {
       <td className="p-3">STATUS BADGE</td>
       <td className="p-3">
         {reserved ? (
-          <Button variant="outline-danger" size="sm">
+          <Button
+            variant="outline-danger"
+            size="sm"
+            onClick={handleMissionLeave}
+          >
             Leave Mission
           </Button>
         ) : (
           <Button
             variant="outline-secondary"
             size="sm"
-            onClick={handleMissionActions}
+            onClick={handleMissionJoin}
           >
             Join Mission
           </Button>
