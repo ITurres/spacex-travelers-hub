@@ -8,7 +8,7 @@ describe('MainHeader', () => {
     render(
       <BrowserRouter>
         <MainHeader />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
 
     const rocketsLink = screen.getByRole('link', { name: 'Rockets' });
