@@ -1,0 +1,12 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+main .display-when-non-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: gray;
+}

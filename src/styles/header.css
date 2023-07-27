@@ -1,0 +1,53 @@
+@import url('bootstrap/dist/css/bootstrap.min.css');
+
+header {
+  background-color: #fff;
+}
+
+.navbar-collapse .navbar-nav {
+  gap: 2rem;
+}
+
+.my-profile-link {
+  border-left: 2px solid gray;
+  padding-left: 2.5rem;
+}
+
+.nav-link.active {
+  position: relative;
+  border-bottom: 1px solid black;
+  width: fit-content;
+}
+
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  left: 8px;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: outline 500ms ease forwards;
+}
+
+@media (max-width: 768px) {
+  .nav-link.active::before {
+    display: none;
+  }
+
+  .navbar-collapse .navbar-nav {
+    gap: 0;
+  }
+
+  .my-profile-link {
+    border-left: unset;
+    padding-left: inherit;
+  }
+
+  .navbar .container {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
