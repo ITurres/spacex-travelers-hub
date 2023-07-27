@@ -22,7 +22,7 @@ function App() {
         <Header />
       </header>
 
-      <main className="container my-3">
+      <main className="container my-3 blue">
         <Routes>
           <Route path="/" element={<RocketsPage state={state} />} />
           <Route path="/missions" element={<MissionsPage />} />

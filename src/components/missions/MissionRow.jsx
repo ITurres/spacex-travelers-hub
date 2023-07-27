@@ -23,10 +23,10 @@ const MissionRow = ({ mission }) => {
       <td>
         <strong>{missionName}</strong>
       </td>
-      <td>{description}</td>
+      <td style={{ color: 'var(--blue)' }}>{description}</td>
       <td className="p-3" style={{ verticalAlign: 'middle' }}>
         {reserved ? (
-          <Badge variant="info" bg="info">
+          <Badge variant="info">
             Active Member
           </Badge>
         ) : (

@@ -34,7 +34,7 @@ const ProfilePage = () => {
   return (
     <Row>
       <Col>
-        <h2>My Missions</h2>
+        <h2 className="blue-cl">My Missions</h2>
         <ListGroup>
           {filteredMissions.length > 0 ? (
             filteredMissions.map(({ missionId, missionName }) => (
@@ -60,7 +60,7 @@ const ProfilePage = () => {
         </ListGroup>
       </Col>
       <Col>
-        <h2>My Rockets</h2>
+        <h2 className="blue-cl">My Rockets</h2>
         <ListGroup>
           {filteredRockets.length > 0 ? (
             filteredRockets.map(({ id, name }) => (

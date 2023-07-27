@@ -17,7 +17,7 @@ const MissionsPage = () => {
 
   if (isLoading) {
     return (
-      <div className="display-when-non-list container">
+      <div className="display-when-non-list container blue-cl">
         <h1>Loading...</h1>
       </div>
     );
@@ -25,7 +25,7 @@ const MissionsPage = () => {
 
   if (error) {
     return (
-      <div className="display-when-non-list container">
+      <div className="display-when-non-list container blue-cl">
         <h1>{error}</h1>
       </div>
     );

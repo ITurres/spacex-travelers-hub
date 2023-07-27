@@ -1,3 +1,15 @@
+:root {
+  --blue: #015189;
+}
+
+.blue-cl {
+  color: var(--blue);
+}
+
+.blue-bg {
+  background-color: var(--blue);
+}
+
 body {
   background-color: white;
   color: black;
@@ -8,5 +20,4 @@ main .display-when-non-list {
   justify-content: center;
   align-items: center;
   height: 50vh;
-  color: gray;
 }

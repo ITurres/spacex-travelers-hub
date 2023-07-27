@@ -1,20 +1,22 @@
 import { NavLink } from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
-import icon from '../images/planet.png';
+import icon from '../images/spacex-logo-short.png';
 import '../styles/header.css';
 
 const MainHeader = () => (
   <Navbar bg="light" variant="light" expand="md" className="p-4">
     <Container>
       <NavLink to="/" style={{ cursor: 'pointer', textDecoration: 'none' }}>
-        <figure className="d-flex align-items-center gap-2 m-0">
-          <Image src={icon} width="40px" />
-          <h1>SpaceX Traveler&apos;s Hub</h1>
+        <figure className="d-flex flex-column align-items-center gap-2 m-0">
+          <Image src={icon} width="200px" />
         </figure>
       </NavLink>
 
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Toggle
+        aria-controls="responsive-navbar-nav"
+        style={{ color: 'var(--blue)' }}
+      />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ms-auto">
           <NavLink

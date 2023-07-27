@@ -20,7 +20,7 @@ const RocketCard = ({ rocketProps }) => {
   };
 
   return (
-    <Card>
+    <Card style={{ backgroundColor: '#f8f9fa' }}>
       <div className="row">
         <div className="col-lg-4 col-xl-3">
           <Card.Img variant="bottom" src={flickrImages[0]} />
@@ -28,9 +28,9 @@ const RocketCard = ({ rocketProps }) => {
         <div className="col-lg-8 col-xl-9">
           <Card.Body>
             <Card.Title>{name}</Card.Title>
-            <Card.Text style={{ maxHeight: '221px', overflow: 'auto' }}>
+            <Card.Text style={{ maxHeight: '221px', overflow: 'auto', color: 'var(--blue)' }}>
               {reserved && (
-                <Badge variant="info" bg="info" className="mb-2">
+                <Badge variant="info" className="mb-2">
                   Reserved
                 </Badge>
               )}
