@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-    <img src="src/assets/media/" alt="spaceX travelers hub logo" width="150"  height="auto" />
+    <img src="src/images/planet.png" alt="spaceX travelers hub logo" width="150"  height="auto" />
     <h1><b>SpaceX Travelers Hub</b></h1>
 </div>
 
@@ -42,6 +42,7 @@
 
 #### Learning objectives
 
+- Work with GitHub Kanban board
 - Use React components
 - Use React props
 - Use React Router
@@ -72,12 +73,16 @@
       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
     </li>
     <li>
+      <img src="https://skillicons.dev/icons?i=jest"/>
+      <a href="https://jestjs.io/">Jest</a>
+    </li>
+    <li>
       <img src="https://skillicons.dev/icons?i=css"/>
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
     </li>
     <li>
       <img src="https://skillicons.dev/icons?i=bootstrap"/>
-      <a href="https://getbootstrap.com/">Bootstrap</a>
+      <a href="https://react-bootstrap.netlify.app/">React-Bootstrap</a>
     </li>
     <li>
       <img src="https://skillicons.dev/icons?i=html"/>
@@ -94,16 +99,10 @@
 - **Use of Hooks**
 - **Use of State**
 - **Use of Redux Toolkit**
+- **Use of React Router**
+- **Use of React Bootstrap**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
-<!-- LIVE DEMO -->
-
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
-
-[spacex-travelers-hub.com]() -->
 
 ---
 
@@ -150,7 +149,9 @@ You may also see any lint errors in the console.
 
 ### Run tests
 
-- Not Applicable.
+```bash
+ npm test
+```
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -183,17 +184,17 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Use React components
-- [ ] Use React props
-- [ ] Use React Router
-- [ ] Connect React and Redux
-- [ ] Handle events in a React app
-- [ ] Write unit tests with React Testing Library
-- [ ] Use styles in a React app
-- [ ] Use React hooks
-- [ ] Apply React best practices and language style guides in code
-- [ ] Use store, actions and reducers in React
-- [ ] Perform a code review for a team member
+- [x] Use React components
+- [x] Use React props
+- [x] Use React Router
+- [x] Connect React and Redux
+- [x] Handle events in a React app
+- [x] Write unit tests with React Testing Library
+- [x] Use styles in a React app
+- [x] Use React hooks
+- [x] Apply React best practices and language style guides in code
+- [x] Use store, actions and reducers in React
+- [x] Perform a code review for a team member
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

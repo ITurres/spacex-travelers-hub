@@ -24,7 +24,6 @@ const MissionRow = ({ mission }) => {
         <strong>{missionName}</strong>
       </td>
       <td>{description}</td>
-      <td className="p-3">STATUS BADGE</td>
       <td className="p-3" style={{ verticalAlign: 'middle' }}>
         {reserved ? (
           <Badge variant="info" bg="info">
