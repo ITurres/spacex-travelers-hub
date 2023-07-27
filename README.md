@@ -42,6 +42,7 @@
 
 #### Learning objectives
 
+- Work with GitHub Kanban board
 - Use React components
 - Use React props
 - Use React Router
@@ -70,6 +71,10 @@
     <li>
       <img src="https://skillicons.dev/icons?i=js"/>
       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+    </li>
+    <li>
+      <img src="https://skillicons.dev/icons?i=jest"/>
+      <a href="https://jestjs.io/">Jest</a>
     </li>
     <li>
       <img src="https://skillicons.dev/icons?i=css"/>
