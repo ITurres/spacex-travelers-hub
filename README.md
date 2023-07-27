@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-    <img src="src/images/planet.png" alt="spaceX travelers hub logo" width="150"  height="auto" />
+    <img src="src/images/spacex-logo.png" alt="spaceX travelers hub logo" width="400"  height="auto" />
     <h1><b>SpaceX Travelers Hub</b></h1>
 </div>
 
