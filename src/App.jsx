@@ -25,8 +25,9 @@ function App() {
       <main className="container my-3 blue">
         <Routes>
           <Route path="/" element={<RocketsPage state={state} />} />
-          <Route path="/missions" element={<MissionsPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/spacex-travelers-hub/" element={<RocketsPage state={state} />} />
+          <Route path="/spacex-travelers-hub/missions" element={<MissionsPage />} />
+          <Route path="/spacex-travelers-hub/profile" element={<ProfilePage />} />
         </Routes>
       </main>
     </>
