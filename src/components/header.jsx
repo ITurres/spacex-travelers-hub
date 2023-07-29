@@ -7,7 +7,7 @@ import '../styles/header.css';
 const MainHeader = () => (
   <Navbar bg="light" variant="light" expand="md" className="p-4">
     <Container>
-      <NavLink to="/" style={{ cursor: 'pointer', textDecoration: 'none' }}>
+      <NavLink to="/spacex-travelers-hub/" style={{ cursor: 'pointer', textDecoration: 'none' }}>
         <figure className="d-flex flex-column align-items-center gap-2 m-0">
           <Image src={icon} width="200px" />
         </figure>
@@ -20,7 +20,7 @@ const MainHeader = () => (
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ms-auto">
           <NavLink
-            to="/"
+            to="/spacex-travelers-hub/"
             style={{ cursor: 'pointer' }}
             className="nav-link fs-5 pb-1"
             activeclassname="active"
@@ -28,7 +28,7 @@ const MainHeader = () => (
             Rockets
           </NavLink>
           <NavLink
-            to="/missions"
+            to="/spacex-travelers-hub/missions"
             style={{ cursor: 'pointer' }}
             className="nav-link fs-5 pb-1"
             activeclassname="active"
@@ -37,7 +37,7 @@ const MainHeader = () => (
           </NavLink>
           <span className="my-profile-link">
             <NavLink
-              to="/profile"
+              to="/spacex-travelers-hub/profile"
               style={{ cursor: 'pointer' }}
               className="nav-link fs-5"
               activeclassname="active"
