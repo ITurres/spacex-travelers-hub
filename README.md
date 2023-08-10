@@ -36,7 +36,7 @@
 
 # 📖 SpaceX Travelers Hub <a name="about-project"></a>
 
-**SpaceX Travelers Hub - React + Redux App** this web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions thanks to the **`SpaceX Web API`**.
+**SpaceX Travelers Hub - React + Redux App** This web application is for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions thanks to the **`SpaceX Web API`**.
 
 ---
 
@@ -175,8 +175,9 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 👤 **Author1**
 
 - GitHub: [@ITurres](https://github.com/ITurres)
-- Twitter: [@Arthur_ITurres](https://twitter.com/ArthurIturres)
 - LinkedIn: [Arthur Emanuel G. Iturres](https://www.linkedin.com/in/arturoemanuelguerraiturres/)
+- Angellist / Wellfound: [Arturo (Arthur) Emanuel Guerra Iturres](https://wellfound.com/u/arturo-arthur-emanuel-guerra-iturres)
+- Youtube: [Arturo Emanuel Guerra Iturres - Youtube Channel](https://www.youtube.com/channel/UC6GFUFHOtBS9mOuI8EJ6q4g)
 
 👤 **Author2**
 
